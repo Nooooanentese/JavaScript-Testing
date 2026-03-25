@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obliczenia</title>
+</head>
+<body>
+
+<h2>Podaj liczbę:</h2>
+<input type="number" id="liczba">
+<button onclick="oblicz()">Oblicz</button>
+
+<p id="wynik"></p>
+
+<script>
+function oblicz() {
+    var x = parseFloat(document.getElementById("liczba").value);
+
+    var przeciwny = -x;
+    var plus15 = x + 15;
+    var plus05 = x + 0.5;
+    var kwadrat = x * x;
+    var dziel2 = x / 2;
+    var reszta = x % 2;
+    var plus1 = x + 1;
+    var minus1 = x - 1;
+    var dol3 = Math.floor(x / 3);
+    var gora3 = Math.ceil(x / 3);
+    var round3 = Math.round(x / 3);
+    var pierwiastek = Math.sqrt(x);
+    var losowa = Math.random() * 50;
+    var iloczyn = x * losowa;
+    var abs = Math.abs(x);
+
+    document.getElementById("wynik").innerHTML =
+        "Wprowadzona liczba: " + x + "<br>" +
+        "Liczba o znaku przeciwnym: " + przeciwny + "<br>" +
+        "Liczba +15: " + plus15 + "<br>" +
+        "Liczba +0.5: " + plus05 + "<br>" +
+        "Kwadrat: " + kwadrat + "<br>" +
+        "Dzielenie przez 2: " + dziel2 + "<br>" +
+        "Reszta z dzielenia przez 2: " + reszta + "<br>" +
+        "Liczba +1: " + plus1 + "<br>" +
+        "Liczba -1: " + minus1 + "<br>" +
+        "Zaokrąglenie w dół (x/3): " + dol3 + "<br>" +
+        "Zaokrąglenie w górę (x/3): " + gora3 + "<br>" +
+        "Zaokrąglenie (x/3): " + round3 + "<br>" +
+        "Pierwiastek: " + pierwiastek + "<br>" +
+        "Iloczyn z losową (0-50): " + iloczyn + "<br>" +
+        "Wartość absolutna: " + abs;
+}
+</script>
+
+</body>
+</html>
